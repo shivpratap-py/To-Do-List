@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="main-content">
+
+        <div class="header">
+            <div class="header-title">
+                <h1>My Tasks</h1>
+                <p id="stats">0 remaining · 0 done</p>
+            </div>
+
+            <div class="theme-btn">
+                <button id="theme-toggle">
+                    <img src="/assets/image/light.svg" alt="Theme">
+                </button>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="text-inp-section">
+                <input
+                    id="task"
+                    type="text"
+                    placeholder="Add a new task..."
+                >
+
+                <button id="add-btn">
+                    Add
+                </button>
+            </div>
+
+            <div class="priority-input">
+                <span>Priority</span>
+
+                <div class="priority-type">
+                    <button class="btn" id="low-btn">
+                        Low
+                    </button>
+
+                    <button class="btn" id="medium-btn">
+                        Medium
+                    </button>
+
+                    <button class="btn" id="high-btn">
+                        High
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="tab-btn">
+                <button
+                    class="filter-btn active"
+                    data-filter="all">
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="active">
+                    Active
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="done">
+                    Done
+                </button>
+            </div>
+        </div>
+
+        <div
+            class="task-tab"
+            id="task-list">
+        </div>
+        <div class="actions">
+    <button id="clear-completed-btn">
+        Clear completed
+    </button>
+</div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

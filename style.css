@@ -1,0 +1,418 @@
+:root {
+    --var-background-container: #141311; 
+    --var-input-background: #1E1C19;
+    --var-header-color: #5C5A57;
+    --text-primary: #f0ede8;
+    --var-theme-background: #1E1C19;
+    --var-input-text-bg: #252320;
+    --var-border-color: rgba(255, 255, 255, 0.12);
+    --var-btn-bg: #e8693a;
+    /* --var-border-color: rgba(0, 0, 0, 0.14); */
+    --var-inp-btn-color: #9a9792;
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.4), 0 2px 6px rgba(0,0,0,0.3);
+    --var-low-color: rgb(74, 155, 111); 
+    --var-low-background: rgba(74, 155, 111, 0.094);
+    --surface-alt: #252320;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+    --text-muted: #5c5a57;
+}
+
+*{
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--var-background-container);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content{
+    width: 49vw;
+}
+
+
+.header{
+    margin-bottom: 40px;
+    margin-top: 20px;
+    width: 50vw;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-title > p{
+    color: var(--var-header-color);
+}
+
+.header-title > h1 {
+    font-size: 2rem;
+}
+
+.theme-btn button {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background-color: var(--var-theme-background);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.input-section {
+    box-sizing: border-box;
+    width: 49vw;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-md);
+    background-color: var(--var-input-background);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.text-inp-section{
+    display: flex;
+    gap: 10px;
+    /* padding: 5px; */
+    margin-bottom: 20px;
+}
+
+.text-inp-section > input{
+    padding: 0 14px;
+    height: 42px;
+    width: 85%;
+    border-radius: 8px;
+    background-color: var(--var-input-text-bg);
+    border: 1px solid var(--var-border-color);
+    outline: none;
+    font-size: 14px;
+    color: white;
+    transition: border-color 0.5s;
+}
+
+.text-inp-section > input[type=text]:focus{
+    border: 1px solid #E8693A;
+    
+}
+
+.text-inp-section > button{
+    background-color: var(--var-btn-bg);
+    height: 42px;
+    border-radius: 8px;
+    padding: 0 18px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.15s, transform 0.1s;
+    color: rgb(255, 255, 255);
+    border: none;
+    /* font-weight: 500; */
+    transition: opacity 0.15s, transform 0.1s;
+    letter-spacing: 0.01em;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.text-inp-section > button:active{
+    transform: scale(0.9);
+    opacity: 0.3;
+}
+
+.priority-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.priority-input > span {
+    font-size: 12px;
+    color: var(--var-header-color);
+}
+
+.priority-type{
+    display: flex;
+    gap: 5px;    
+}
+
+.priority-type > button{
+    background-color: rgba(255, 0, 0, 0);
+    color: var(--var-inp-btn-color);
+    padding: 4px 10px;
+    border-radius: 99px;
+    transition: 0.15s;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--var-border-color);
+}
+
+.priority-type button.active-low {
+    background-color: rgba(74, 155, 111, 0.15);
+    color: rgb(74, 155, 111);
+    border-color: rgb(74, 155, 111);
+}
+
+.priority-type button.active-medium {
+    background-color: rgba(255, 193, 7, 0.15);
+    color: rgb(255, 193, 7);
+    border-color: rgb(255, 193, 7);
+}
+
+.priority-type button.active-high {
+    background-color: rgba(220, 53, 69, 0.15);
+    color: rgb(220, 53, 69);
+    border-color: rgb(220, 53, 69);
+}
+
+.nav{
+    background-color: var(--var-input-background);
+    width: 49vw;
+    display: flex;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+.tab-btn{
+    width: 100%;
+    display: flex;
+    padding: 4px;
+}
+
+.tab-btn > button{
+    flex: 1 1 0%;
+    padding: 10px 0px;
+    border-radius: 7px;
+    border-width: medium;
+    border-style: none;
+    border-image: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.15s;
+    box-shadow: none;
+}
+
+.tab-btn > button.active {
+    flex: 1 1 0%;
+    padding: 7px 0px;
+    border-radius: 7px;
+    border-width: medium;
+    border-style: none;
+    border-color: currentcolor;
+    border-image: none;
+    background: var(--surface-alt);
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.15s;
+    box-shadow: var(--shadow-sm);
+}
+
+.task-tab{
+    margin-top: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.task{
+    background: var(--var-input-background);
+    border: 1px solid var(--var-border-color);
+    border-radius: 1.125rem;
+    min-height: 3.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 1.375rem;
+
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.task:hover{
+    border-color: rgba(255,255,255,0.18);
+}
+
+.task-right{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.task-right span{
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+
+.taskbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskbtn input[type="checkbox"]{
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+
+    border: 0.125rem solid var(--var-border-color);
+    border-radius: 0.5rem;
+
+    background: transparent;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.taskbtn input[type="checkbox"]:hover{
+    border-color: rgba(255,255,255,0.25);
+}
+
+.taskbtn input[type="checkbox"]:checked{
+    background: var(--var-btn-bg);
+    border-color: var(--var-btn-bg);
+}
+
+.taskbtn input[type="checkbox"]::after{
+    content: "✓";
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+
+    opacity: 0;
+    transform: scale(0.5);
+
+    transition: all 0.5s ease;
+}
+
+.taskbtn input[type="checkbox"]:checked::after{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.task.completed .task-right span{
+    text-decoration: line-through;
+    opacity: 0.55;
+}
+
+
+
+.task-left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-left button{
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border: none;
+    border-radius: 0.75rem;
+
+    background: rgba(255,255,255,0.05);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.task-left button:hover{
+    background: rgba(255,255,255,0.08);
+}
+
+.task-left button img{
+    width: 1rem;
+    height: 1rem;
+    opacity: 0.7;
+}
+
+.priority-dot{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.priority-dot.low{
+    background: var(--var-low-color);
+}
+
+.priority-dot.medium{
+    background: rgb(255, 193, 7);
+}
+
+.priority-dot.high{
+    background: rgb(220, 53, 69);
+}
+
+.light-theme{
+    --var-background-container: #f5f3f0;
+    --var-input-background: #ffffff;
+    --var-header-color: #8a8a8a;
+    --text-primary: #111111;
+    --var-theme-background: #ffffff;
+    --var-input-text-bg: #f1efec;
+    --var-border-color: rgba(0, 0, 0, 0.08);
+    --var-btn-bg: #d45a1c;
+    --var-inp-btn-color: #666;
+    --surface-alt: #f1efec;
+    --text-muted: #888;
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.light-theme .header{
+    color: #111;
+}
+
+.light-theme .text-inp-section input{
+    color: #111;
+}
+
+.actions{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+#clear-completed-btn{
+    /* padding: 0.9rem 1.4rem; */
+    border-radius: 0.9rem;
+
+    background: transparent;
+    border: 1px solid var(--var-border-color);
+
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#clear-completed-btn:hover{
+    /* background: var(--var-input-background); */
+    color: var(--text-primary);
+    border-color: red;
+}
